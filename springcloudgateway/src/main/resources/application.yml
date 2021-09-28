@@ -1,0 +1,12 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: springcloud-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true # use netflix eureka discovery service
+          lower-case-service-id: true # this is important to find service name due to case sensitivity

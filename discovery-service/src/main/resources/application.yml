@@ -1,0 +1,14 @@
+# Web Server Config
+server:
+  port: ${SPRING_PORT:8761}
+
+# Spring App Config
+spring:
+  application:
+    name: ${SPRING_APPNAME:discovery-service}
+
+# Eureka server Config
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false

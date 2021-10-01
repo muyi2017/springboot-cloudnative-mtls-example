@@ -1,12 +1,19 @@
+# Web Server Config
 server:
-  port: 8080
+  port: ${SPRING_PORT:8080}
 
+# Spring App Config
 spring:
   application:
-    name: springcloud-gateway
+    name: ${SPRING_APPNAME:springcloud-gateway}
   cloud:
     gateway:
       discovery:
         locator:
           enabled: true # use netflix eureka discovery service
           lower-case-service-id: true # this is important to find service name due to case sensitivity
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${SPRING_EUREKA_SERVER:localhost}:${SPRING_EUREKA_PORT:8761}/eureka

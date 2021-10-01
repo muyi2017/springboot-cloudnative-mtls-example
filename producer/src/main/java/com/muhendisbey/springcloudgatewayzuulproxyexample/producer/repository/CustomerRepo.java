@@ -19,6 +19,7 @@ public class CustomerRepo implements ICustomerRepo
                 .setId(id)
                 .setName("Onur")
                 .setSurname("GURSOY")
-                .setEmail("onurgursoy_" + id + "@gmail.com");
+                .setEmail("onurgursoy_" + id + "@gmail.com")
+                .setMobile("+905..XXXyyZZ");
     }
 }
